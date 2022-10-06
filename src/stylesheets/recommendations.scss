@@ -1,0 +1,130 @@
+@import '../App.scss';
+
+.recom-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.revealactive {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.recom-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #444;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 300px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+  margin: 1rem;
+  position: relative;
+}
+
+.recom-img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.recom-a {
+  text-decoration: none;
+}
+
+.recom-sub {
+  color: #111;
+  font-size: 1rem;
+  height: 100px;
+  overflow-y: scroll;
+  border: 1px dotted lightgray;
+  text-align: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.recom-hero {
+  color: #2b89e1;
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  height: 20px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.recom-text {
+  margin-top: 1rem;
+  color: #111;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-style: italic;
+  border: 1px dotted lightgray;
+  min-height: 200px;
+  height: 200px;
+  max-height: 200px;
+  overflow-y: scroll;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+
+  &::before {
+    content: open-quote;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: close-quote;
+  }
+}
+
+// Mobile Version
+@media screen and (max-width: 768px) {
+  .recom-container {
+    width: 90%;
+  }
+
+  .recom-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+    .recom-hero {
+      align-self: center;
+      font-size: 1rem;
+    }
+
+    .recom-sub {
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    .recom-text {
+      font-size: 0.75rem;
+      min-height: 150px;
+    }
+  }
+
+  .recom-img {
+    align-self: center;
+  }
+}

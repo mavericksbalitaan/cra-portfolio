@@ -1,0 +1,102 @@
+@import '../App.scss';
+
+.morebio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.morebio-content {
+  margin: 1rem auto;
+  width: 50%;
+
+  .firstdiv,
+  .seconddiv {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      border-radius: 4px;
+      font-family: sans-serif;
+    }
+
+    img {
+      width: 100px;
+      height: auto;
+      margin-left: 1rem;
+    }
+  }
+
+  .seconddiv {
+    margin: 0;
+
+    img {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  .react-logo {
+    animation: rotating infinite 10s linear;
+  }
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .morebio-container {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    .morebio-content {
+      width: 80%;
+
+      .firstdiv {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 0;
+
+        p {
+          padding: 1rem;
+          font-size: 0.75rem;
+          text-align: center;
+        }
+
+        img {
+          width: 70px;
+          margin: 0;
+        }
+      }
+
+      .seconddiv {
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          padding: 1rem;
+          font-size: 0.75rem;
+          text-align: center;
+        }
+
+        img {
+          width: 70px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

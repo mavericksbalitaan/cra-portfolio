@@ -1,0 +1,78 @@
+@import '../App.scss';
+
+.techstacks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+
+  .logo-left {
+    width: 25%;
+    height: auto;
+    margin-right: auto;
+
+    &:hover {
+      animation: heartbeat 1.5s ease-in-out both;
+    }
+  }
+
+  .logo-right {
+    width: 25%;
+    height: auto;
+    margin-left: auto;
+
+    &:hover {
+      animation: heartbeat 1.5s ease-in-out both;
+    }
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+// Mobile Version
+@media screen and (max-width: 768px) {
+  .techstacks-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 60%;
+
+    .logo-left {
+      width: 10%;
+      margin: 0 0.25rem;
+    }
+
+    .logo-right {
+      width: 10%;
+      margin: 0 0.25rem;
+    }
+  }
+}

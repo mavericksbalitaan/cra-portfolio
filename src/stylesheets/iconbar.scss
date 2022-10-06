@@ -1,0 +1,41 @@
+@import '../App.scss';
+
+.iconbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+  height: 100vh;
+  position: fixed;
+  background-color: transparent;
+  // opacity: 0.5;
+  // z-index: 1;
+  border: 1px solid red;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.icon {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  &:hover {
+    color: #fff;
+    transform: scale(1.15);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .iconbar {
+    width: 10%;
+    left: 0.5rem;
+    border-radius: 0;
+    min-height: 0;
+    height: 25vh;
+    position: fixed;
+    top: 40%;
+  }
+}

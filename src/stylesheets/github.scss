@@ -1,0 +1,76 @@
+.github-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.github-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 1rem;
+  font-style: normal;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+
+.github-calendar {
+  margin: 2rem auto;
+}
+
+.github-name {
+  font-size: 1.5rem;
+  color: inherit;
+  margin-top: 1rem;
+}
+
+.github-login {
+  font-size: 1rem;
+}
+
+.github-bio {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.github-text {
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+.github-avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .github-container {
+    margin-top: 2rem;
+  }
+
+  .github-wrapper {
+    width: 100%;
+
+    .github-avatar {
+      width: 100px;
+    }
+
+    .github-name {
+      font-size: 1.25rem;
+    }
+
+    .github-bio {
+      font-size: 0.75rem;
+      margin: 0.25rem 1rem;
+    }
+
+    .github-text {
+      font-size: 0.75rem;
+      margin: 0 auto;
+    }
+  }
+}

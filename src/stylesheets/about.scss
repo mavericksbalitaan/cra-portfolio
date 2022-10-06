@@ -1,0 +1,81 @@
+@import '../App.scss';
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+#subhero {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  width: 50%;
+  text-align: justify;
+}
+
+#myname {
+  font-family: 'Carter One', sans-serif;
+  font-size: 5rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline;
+}
+
+.myname--dark {
+  background: linear-gradient(to right, #8e9eab, #eef2f3);
+}
+
+.myname--light {
+  background: linear-gradient(to right, #000, #434343);
+}
+
+// Mobile Version
+@media screen and (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .title {
+    position: absolute;
+    top: 25%;
+  }
+
+  #myname {
+    font-size: 2rem;
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  #subhero {
+    width: 80%;
+    font-size: 0.75rem;
+  }
+}
