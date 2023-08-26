@@ -29,6 +29,7 @@ const JsonData2 = {
   Deployment_Methods: [
     'AWS',
     'Vercel',
+    'Render',
     'GitHub_Pages',
     'Netlify',
   ],
